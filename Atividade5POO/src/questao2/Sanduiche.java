@@ -1,6 +1,6 @@
 package questao2;
 
-public abstract class Sanduiche {
+public class Sanduiche {
 
 	protected String nome;
 	protected Pao pao;
@@ -14,7 +14,7 @@ public abstract class Sanduiche {
 		System.out.println("Uma fatia de presunto");
 	}
 	
-	public abstract void preparar();
+//	public abstract void preparar();
 	
 	public void box(){
 		System.out.println("Embala sanduiche");

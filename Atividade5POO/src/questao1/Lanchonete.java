@@ -9,7 +9,6 @@ public abstract class Lanchonete{
 		sanduiche.createPao();
 		sanduiche.createQueijo();
 		sanduiche.createPresunto();
-		sanduiche.createSalada();
 		sanduiche.box();
 		return sanduiche;
 	}

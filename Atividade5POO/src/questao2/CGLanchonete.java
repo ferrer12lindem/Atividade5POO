@@ -2,10 +2,19 @@ package questao2;
 
 public class CGLanchonete extends Lanchonete{
 
-	public Sanduiche criarSanduiche(SanduichesIngredientFactory sanduichesIngredientes){
+	public CGLanchonete(){
+		super.nome = "SanduicheCG";
+	}
+	
+	public SanduichesIngredientFactory criarSanduiche(SanduichesIngredientFactory sanduichesIngredientes){
 
 		sanduichesIngredientes = new SanduichesIngredientFactoryCG(); 
-		Sanduiche sanduiche = new SanduicheCG(sanduichesIngredientes);
-		return sanduiche;
+
+		System.out.println("Ingredientes "+nome+"...");
+		System.out.println(sanduichesIngredientes.createPao().descricao());
+		System.out.println(sanduichesIngredientes.createQueijo().descricao());
+		System.out.println(sanduichesIngredientes.createPresunto().descricao());
+		System.out.println(sanduichesIngredientes.createSalada().descricao());
+		return sanduichesIngredientes;
 	}
 }

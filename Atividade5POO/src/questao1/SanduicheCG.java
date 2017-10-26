@@ -17,10 +17,4 @@ public class SanduicheCG extends Sanduiche{
 		super.ingredientes = new SaladaSemVerdura();
 		System.out.println(super.ingredientes.descricao());
 	}
-
-	@Override
-	public void createSalada() {
-		System.out.println("Salada sem verdura");
-	}
-
 }

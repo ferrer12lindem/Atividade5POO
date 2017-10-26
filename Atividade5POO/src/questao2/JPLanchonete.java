@@ -1,11 +1,20 @@
 package questao2;
 
 public class JPLanchonete extends Lanchonete{
+	
+	public JPLanchonete(){
+		super.nome = "SanduicheJP";
+	}
 
-	public Sanduiche criarSanduiche(SanduichesIngredientFactory sanduichesIngredientes){
-
+	public SanduichesIngredientFactory criarSanduiche(SanduichesIngredientFactory sanduichesIngredientes){
+		
 		sanduichesIngredientes = new SanduichesIngredientFactoryJP(); 
-		Sanduiche sanduiche = new SanduicheJP(sanduichesIngredientes);
-	    return sanduiche;
+		
+		System.out.println("Ingredientes "+nome+"...");
+		System.out.println(sanduichesIngredientes.createPao().descricao());
+		System.out.println(sanduichesIngredientes.createQueijo().descricao());
+		System.out.println(sanduichesIngredientes.createPresunto().descricao());
+		System.out.println(sanduichesIngredientes.createSalada().descricao());
+		return sanduichesIngredientes;
 	}
 }

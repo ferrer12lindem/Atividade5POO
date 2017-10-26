@@ -17,9 +17,4 @@ public class SanduicheJP extends Sanduiche{
 		super.ingredientes = new SaladaComVerdura();
 		System.out.println(super.ingredientes.descricao());
 	}
-
-	@Override
-	public void createSalada() {
-		System.out.println("Salada com verdura");
-	}
 }

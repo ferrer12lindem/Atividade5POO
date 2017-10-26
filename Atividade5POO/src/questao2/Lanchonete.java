@@ -2,13 +2,21 @@ package questao2;
 
 public abstract class Lanchonete {
 
-	public Sanduiche orderSanduiche(SanduichesIngredientFactory sanduichesIngredientes){
-		Sanduiche sanduiche = criarSanduiche(sanduichesIngredientes);
-		sanduiche.preparar();
+	protected String nome;
+	protected Pao pao;
+	protected Queijo queijo;
+	protected Presunto presunto;
+	protected Salada salada;
+	protected SanduichesIngredientFactory sanduichesIngredientes;
+	
+	public SanduichesIngredientFactory orderSanduiche(SanduichesIngredientFactory sanduichesIngredientes){
+		sanduichesIngredientes = criarSanduiche(sanduichesIngredientes);
+		Sanduiche sanduiche = new Sanduiche();
+		System.out.println("Preparando...");
 		sanduiche.descricao();
 		sanduiche.box();
-		return sanduiche;
+		return sanduichesIngredientes;
 	}
 	
-	public abstract Sanduiche criarSanduiche(SanduichesIngredientFactory sanduichesIngredientes);
+	public abstract SanduichesIngredientFactory criarSanduiche(SanduichesIngredientFactory sanduichesIngredientes);
 }

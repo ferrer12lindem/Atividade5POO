@@ -18,8 +18,6 @@ public abstract class Sanduiche {
 		System.out.println("Uma fatia de presunto");
 	}
 	
-	public abstract void createSalada();
-	
 	public void box(){
 		System.out.println("Embala sanduiche");
 	}
